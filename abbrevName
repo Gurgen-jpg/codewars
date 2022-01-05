@@ -1,0 +1,8 @@
+function abbrevName(name){
+  let init = name[0];
+  for (let i = 1; i < name.length; i++)
+    if (name[i] === ' ') {
+      init +=('.'+name[i+1]);
+    }
+  return (init.toUpperCase());
+}
