@@ -1,0 +1,37 @@
+```javascript
+function findEvenIndex(arr)
+{
+  let sumL = 0;
+  let sumR = 0;
+  let ind = 0;
+  let sum = 0;
+  for (let i = 1; i < arr.length; i++) {
+    sum += arr[i];
+  };
+  for (let i = 1; i < arr.length; i++) {
+    for (let l = 0; l < i; l++) {
+      sumL += arr[l];
+    };
+    for (let r = i + 1; r < arr.length; r++) {
+      sumR += arr[r];
+    };
+    if (sumL === sumR) {
+     ind = i ; 
+     console.log(ind);  
+     break;
+    } else {
+      sumL = 0;
+      sumR = 0;
+    }
+  }
+  if (ind > 0) {
+    console.log(ind)
+    return ind;
+  } else if (sum === 0) {
+    return 0;
+  } else {
+    console.log(-1);
+    return -1;
+  }
+}
+```
