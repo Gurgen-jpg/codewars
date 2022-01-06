@@ -1,0 +1,13 @@
+function SeriesSum(n) {
+  let sum = 0;
+  let k = 1;
+   if (n === 0) {
+     return "0.00";
+   } else {
+     for (i = 1; i <= n; i++) {
+       sum += 1/k;
+       k += 3;
+     } 
+   }
+  return String(sum.toFixed(2));
+}
