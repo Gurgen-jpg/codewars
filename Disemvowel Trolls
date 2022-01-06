@@ -1,0 +1,10 @@
+function disemvowel(str) {
+  let newStr = "";
+  let vowels = "AaEeIiOoUu";
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.indexOf(str[i]) === -1) {
+      newStr += str[i];
+    }
+  }
+  return newStr;
+}
