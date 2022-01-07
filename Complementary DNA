@@ -1,0 +1,20 @@
+function DNAStrand(dna){
+  let testDna = "";
+  for (let i = 0; i < dna.length; i ++) {
+    switch(dna[i]) {
+        case "A": 
+        testDna += "T";
+        break;
+        case "T":
+        testDna += "A";
+        break;
+        case "G":
+        testDna += "C";
+        break;
+        case "C":
+        testDna += "G";
+        break;
+    }
+  }
+  return testDna;
+}
