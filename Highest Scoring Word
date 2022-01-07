@@ -1,0 +1,22 @@
+function high(str){
+  let score = 0; // промежуточный подсчет очков
+  let winner = 0; // максимум очков
+  let winWord = ''; // слово победитель
+  let word = ''; // промежуточное слово
+  let alphabet = "0abcdefghijklmnopqrstuvwxyz";
+  str += ' ';  
+  for (let i = 0; i < str.length; i++) {
+    if (alphabet.indexOf(str[i]) > 0) {
+      score += alphabet.indexOf(str[i]);
+      word += str[i];
+    } else {
+      if (score > winner) {
+        winner = score;
+        winWord = word;
+        }
+      score = 0;
+      word = '';
+    }
+  }
+  return winWord;
+}
