@@ -1,0 +1,11 @@
+String.prototype.toJadenCase = function () {
+   let a = this.split(' ');
+   let b = [];
+    for (let i = 0; i < a.length; i++) {
+        b[i] = a[i][0].toUpperCase();
+        for (let j = 1; j < a[i].length; j++) {
+            b[i] += a[i][j];
+        }
+    }
+     return b.join(' '); 
+   };
