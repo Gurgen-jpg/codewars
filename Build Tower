@@ -1,0 +1,22 @@
+function towerBuilder(nFloors) {
+    let n = nFloors - 1;
+    let s = '';
+    let k = 1;
+    for (let c = 1; c <= nFloors; c++)
+   {
+       for (let i = 1; i <= n; i++ ){
+            s += ' '
+       }
+       for (let z = 1; z <= k; z++ ) {
+           s += '*';
+       }
+       for (let i = 1; i <= n; i++ ){
+        s += ' '
+       }
+       s+= "-";
+       n-=1;
+       k += 2;
+   }
+   return s.split('-').filter(znak => znak.length > 0);
+    // build here
+  }
