@@ -1,0 +1,2 @@
+const removeConsecutiveDuplicates = s => 
+s.match(/\w*\w/g).filter((el, id, ar) => (el !== ar[id + 1])).join(' ');
