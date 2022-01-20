@@ -1,0 +1,4 @@
+function highAndLow(numbers){
+    return [numbers.split(' ').sort((a,b) => b - a)[0], numbers.split(' ').sort((a,b) => b-a)[numbers.split(' ').length - 1]].join(' ');
+    // ...
+  }
