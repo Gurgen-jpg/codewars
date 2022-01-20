@@ -1,0 +1,36 @@
+function diamond(n){
+  if ((n%2 == 0) || (n < 0)){
+        return null;
+    } else {  
+  let maxSpace = (n-1)/2;
+  let cikl = maxSpace;
+  let di ='*';
+  let diam = '';
+  for (let i = 1; i <= cikl ; i++) {
+     for (j = 1; j <= maxSpace; j++) {
+         diam += ' '
+     }
+      diam += di;
+      maxSpace -= 1;
+      di += '**';
+      diam += "\n";
+      ;
+  }
+  for (let i = 1; i <= n; i++) {
+      diam += "*"
+  }
+  diam += "\n";
+  for (let j = 1; j <= cikl; j++) {
+      maxSpace += 1;
+      for (let p = 1; p <= maxSpace; p++) {
+          diam += ' ';
+      }
+      for (let i = n-2; i >= 1; i--) {
+      diam += '*';
+      }
+      
+      n -= 2;
+      diam += '\n';
+  }
+    return diam;
+}
