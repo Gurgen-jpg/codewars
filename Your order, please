@@ -1,0 +1,16 @@
+function order(words){
+    let otvet = '';
+    if (words.length === 0) {
+        return otvet;
+    } else {
+    let num = words.match(/[1-9]/g);
+    let slova = words.split(' ');
+    let result = [];
+    for (let i=0; i <slova.length; i ++){
+        result[i] = num[i] + slova[i];
+    }
+    result.sort();
+    otvet = result.map(el => el.slice(1)).join(' ');
+    return otvet;
+}
+  }
