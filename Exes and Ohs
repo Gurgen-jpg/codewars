@@ -1,0 +1,15 @@
+function XO(str) {
+    let x = str.match(/x/ig);
+    let o = str.match(/o/ig);
+    if (x === null && o === null) {
+        return true
+    } else if ((x === null && o !== null)||(x !== null && o === null)) {
+        return false
+    }
+    if (x.length === o.length) {
+        return true
+    } else {
+        return false;
+    }
+    //code here
+}
