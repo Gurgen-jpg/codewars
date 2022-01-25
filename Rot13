@@ -1,0 +1,21 @@
+function rot13(message){
+    //your code here
+    let alpha = 'abcdefghijklmnopqrstuvwxyz'; 
+    let alphaRot = 'nopqrstuvwxyzabcdefghijklm';
+    let str = message.split('');
+    let arAlpha = alpha.split('');
+    let n = 0;
+    let arAlphaRot = alphaRot.split('');
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i].search(/[a-z]/) !== -1) {
+            n = arAlpha.indexOf(str[i]);
+            str[i] = arAlphaRot[n];
+        } 
+        if (str[i].search(/[A-Z]/) !== -1) {
+            n = arAlpha.indexOf(str[i].toLowerCase());
+            str[i] = arAlphaRot[n].toUpperCase();         
+        }
+    }
+    return str.join('');
+  }
