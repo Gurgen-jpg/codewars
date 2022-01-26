@@ -1,0 +1,10 @@
+function arrayDiff(a, b) {
+   result = a.map(function(elem,id,array) {
+      if (b.includes(elem) == false) {
+          return elem
+      }
+  });
+  return result.filter(function (el) {
+      return (el !== undefined)      
+  })
+}
