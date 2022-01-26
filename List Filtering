@@ -1,0 +1,6 @@
+function filter_list(l) {
+    return l
+    .map(function(el,id,array) { if (typeof el === 'number')
+        return el })       
+    .filter(function (el) {return (el !== undefined)})
+ }
