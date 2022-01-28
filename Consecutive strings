@@ -1,0 +1,17 @@
+function longestConsec(strarr, k) {
+    let left = 0;
+    let temp = '';
+    let max = 0;
+    let cicle = strarr.length - k;
+    if (cicle < 0 || k <= 0 || strarr.length === 0){
+        return ''
+    } else {
+        for (let i = left; i <= cicle; i++)
+        {temp = strarr.slice(i, i+k).join('');
+        if (temp.length > max) {
+            max = temp.length;
+            result = temp;}
+        }
+    }
+    return result;
+}
