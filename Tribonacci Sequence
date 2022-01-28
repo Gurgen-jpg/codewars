@@ -1,0 +1,14 @@
+function tribonacci(signature,n){
+    let k = n;
+    let result = signature;
+    while (n>0) {             
+        let next = result.length - 3;
+        let temp = 0;
+        for (let i = next; i<result.length; i++) {
+            temp += result[i]
+        }
+        result.push(temp)
+        n--;        
+    }
+    return result.slice(0,k);
+  }
