@@ -1,0 +1,1 @@
+const areYouPlayingBanjo = (name) => {return name + ((name.toUpperCase().startsWith('R'))? ' plays banjo': ' does not play banjo')}
