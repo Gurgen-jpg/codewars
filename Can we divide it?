@@ -1,0 +1,5 @@
+function isDivideBy(number, a, b) {
+    return [number, a, b].every(function(el, id, ar){
+        return ((number%el) === 0) ? true : false
+    })
+  }
