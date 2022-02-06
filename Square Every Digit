@@ -1,0 +1,4 @@
+function squareDigits(num){
+    let result =  String(num);
+    return  Number(result.split('', num.length).map(n => Math.pow(n,2)).join(''));   
+  }
