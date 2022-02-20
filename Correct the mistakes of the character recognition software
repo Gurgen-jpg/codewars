@@ -1,0 +1,11 @@
+function correct(string)
+{ 
+  let result = string.split('').map((el) =>  {
+    if (el == '5') {return 'S'} 
+    else if (el == '1') {return 'I'} 
+    else if (el == '0') {return 'O'}
+    else return el
+  }
+  ).join('')
+  return result
+}
